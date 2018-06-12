@@ -48,14 +48,18 @@ for (var in ctd_vars){
   havg <- setNames(aggregate(var_data, list(rtime_hour), mean, na.rm = TRUE), c("time_hh", "var_data_mean"))
   qplot(havg$time_hh, havg$var_data_mean)
   
-  # Make a nicer plot of the hourly averaged data
+  # Make a nicer plot of the hourly averaged data.
+  # Note: plotly files can be saved as interactive web-based graphs. See https://plot.ly/r/getting-started/
+  # However here I'm saving the plots as local .png files using the export() function with the webshot 
+  # package: https://github.com/wch/webshot/  
+  
   # Only reverse the y-axis if plotting pressure
   if (var == "ctdmo_seawater_pressure") {
     yax <- list(title = sprintf("%s (%s)", var, var_units), showline = TRUE, autorange = "reversed")
   } else {
     yax <- list(title = sprintf("%s (%s)", var, var_units), showline = TRUE)
   }
-    
+  
   p <- plot_ly(havg, x = havg$time_hh, y = havg$var_data_mean, type = "scatter", mode = "markers") %>%
     layout(title = sprintf("%s (hourly averaged)", refdes), xaxis = list(showline = TRUE), yaxis = yax)
   export(p, file = paste(sdir, sprintf("%s_%s.png", file_path_sans_ext(ff), var), sep="/"))

@@ -88,6 +88,10 @@ for (i in 1:length(ctd_vars)){
   } else {
     yax <- list(title = sprintf("%s (%s)", var, var_units), showline = TRUE)
   }
+
+  # Note: plotly files can be saved as interactive web-based graphs. See https://plot.ly/r/getting-started/
+  # However here I'm saving the plots as local .png files using the export() function with the webshot 
+  # package: https://github.com/wch/webshot/  
   
   p <- plot_ly(df, x = df$ctime, y = df[[var]], type = "scatter", mode = "markers") %>%
     layout(title = sprintf("%s-%s-%s", subsite, node, sensor), xaxis = list(showline = TRUE), yaxis = yax)
