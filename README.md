@@ -13,3 +13,5 @@ The [Datateam Database](http://ooi.visualocean.net/) is a good resource to find 
 - [download_plot_json.R](https://github.com/lgarzio/ooi-tools-r/blob/master/scripts/download_nc.R): Download data via the OOI API in a synchronous (instantaneous) request and plot a timeseries. Useful to quickly look at data.
 
 - [plot_nc_timeseries.R](https://github.com/lgarzio/ooi-tools-r/blob/master/scripts/plot_nc.R): Quickly plot a timeseries from a NetCDF file.
+
+- [request_annotations_refdes.R](https://github.com/lgarzio/ooi-tools-r/blob/master/scripts/request_annotations_refdes.R): Return a .csv containing annotations in uFrame for a reference designator. This will include all annotations for the specific instrument, as well as annotations at the platform and node level.
