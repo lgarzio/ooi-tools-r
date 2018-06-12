@@ -1,5 +1,6 @@
 # author: Lori Garzio
-# 2018-06-11
+# Quickly plot a timeseries from a NetCDF file.
+# 2018-06-08
 
 # Load required packages
 library(ncdf4)
@@ -10,7 +11,6 @@ library(webshot)
 
 sdir <- "/Users/lgarzio/Documents/repo/R_scripts" # location to save output
 
-# File downloaded using ../download_nc.R
 fname <- "https://opendap.oceanobservatories.org/thredds/dodsC/ooi/ooidatateam@gmail.com/20180608T142549-GA03FLMA-RIM01-02-CTDMOG040-recovered_inst-ctdmo_ghqr_instrument_recovered/deployment0002_GA03FLMA-RIM01-02-CTDMOG040-recovered_inst-ctdmo_ghqr_instrument_recovered_20151125T193001-20161105T184501.nc"
 f <- nc_open(fname)
  

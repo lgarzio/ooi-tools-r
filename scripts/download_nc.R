@@ -1,4 +1,5 @@
 # author: Lori Garzio
+# Download data in NetCDF file format (asynchronous request) via the OOI API. The data will be processed and served via THREDDs.
 # 2018-06-08
 # refs: https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/
 
