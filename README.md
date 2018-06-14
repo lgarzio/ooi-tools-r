@@ -8,6 +8,8 @@ To use the OOI API, you will need an API Username and Password. Register for an 
 The [Datateam Database](http://ooi.visualocean.net/) is a good resource to find the components you will need to make API data requests (reference designator, stream, method) and to find data product descriptions and units.
 
 ### Scripts
+- [ooi_quickstart.R](https://github.com/lgarzio/ooi-tools-r/blob/master/ooi_quickstart.R): Quickstart tutorial on downloading OOI data using the Machine-to-Machine API interface, and quick plotting.
+
 - [download_nc.R](https://github.com/lgarzio/ooi-tools-r/blob/master/scripts/download_nc.R): Download data in NetCDF file format (asynchronous request) via the OOI API. The data will be processed and served via THREDDs.
 
 - [download_plot_json.R](https://github.com/lgarzio/ooi-tools-r/blob/master/scripts/download_nc.R): Download data via the OOI API in a synchronous (instantaneous) request and plot a timeseries. Useful to quickly look at data.
